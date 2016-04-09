@@ -1,0 +1,118 @@
+# Name: Anudhriti Reddy Katanguri
+# Username: anukatan
+
+Doing Depth First Search  on presolved:
+The solution's cost is: 0, and involved expanding 1 verticies
+Finding the solution involved 0.000343084335327 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Breadth First Search on presolved:
+The solution's cost is: 0, and involved expanding 1 verticies
+Finding the solution involved 0.000307083129883 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Best First with heuristic euclideanDistance on presolved:
+The solution's cost is: 0, and involved expanding 1 verticies
+Finding the solution involved 0.000333070755005 seconds of walltime
+----------------------------------------------------------------------------------
+Doing A* with heuristic euclideanDistance on presolved:
+The solution's cost is: 0, and involved expanding 1 verticies
+Finding the solution involved 0.000293970108032 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Best First with heuristic manhattanDistance on presolved:
+The solution's cost is: 0, and involved expanding 1 verticies
+Finding the solution involved 0.000288963317871 seconds of walltime
+----------------------------------------------------------------------------------
+Doing A* with heuristic manhattanDistance on presolved:
+The solution's cost is: 0, and involved expanding 1 verticies
+Finding the solution involved 0.000286817550659 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Depth First Search  on easy:
+The solution's cost is: 2.1, and involved expanding 35 verticies
+Finding the solution involved 0.017254114151 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Breadth First Search on easy:
+The solution's cost is: 2.1, and involved expanding 11 verticies
+Finding the solution involved 0.00483393669128 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Best First with heuristic euclideanDistance on easy:
+The solution's cost is: 2.1, and involved expanding 10 verticies
+Finding the solution involved 0.0046911239624 seconds of walltime
+----------------------------------------------------------------------------------
+Doing A* with heuristic euclideanDistance on easy:
+The solution's cost is: 2.1, and involved expanding 4 verticies
+Finding the solution involved 0.00133991241455 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Best First with heuristic manhattanDistance on easy:
+The solution's cost is: 2.1, and involved expanding 10 verticies
+Finding the solution involved 0.00328612327576 seconds of walltime
+----------------------------------------------------------------------------------
+Doing A* with heuristic manhattanDistance on easy:
+The solution's cost is: 2.1, and involved expanding 4 verticies
+Finding the solution involved 0.00128316879272 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Depth First Search  on medium:
+Ran out of time for thinking
+The queue is of size: 5548
+Doing Breadth First Search on medium:
+Ran out of time for thinking
+The queue is of size: 10346
+Doing Best First with heuristic euclideanDistance on medium:
+The solution's cost is: 24.7, and involved expanding 71 verticies
+Finding the solution involved 0.0277600288391 seconds of walltime
+----------------------------------------------------------------------------------
+Doing A* with heuristic euclideanDistance on medium:
+The solution's cost is: 17.3, and involved expanding 31 verticies
+Finding the solution involved 0.0122859477997 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Best First with heuristic manhattanDistance on medium:
+The solution's cost is: 30.3, and involved expanding 50 verticies
+Finding the solution involved 0.0186340808868 seconds of walltime
+----------------------------------------------------------------------------------
+Doing A* with heuristic manhattanDistance on medium:
+The solution's cost is: 17.3, and involved expanding 21 verticies
+Finding the solution involved 0.00869488716125 seconds of walltime
+----------------------------------------------------------------------------------
+Doing Depth First Search  on hard:
+Ran out of time for thinking
+The queue is of size: 6383
+Doing Breadth First Search on hard:
+Ran out of time for thinking
+The queue is of size: 13200
+Doing Best First with heuristic euclideanDistance on hard:
+Ran out of time for thinking
+The queue is of size: 7900
+Doing A* with heuristic euclideanDistance on hard:
+Ran out of time for thinking
+The queue is of size: 7900
+Doing Best First with heuristic manhattanDistance on hard:
+The solution's cost is: 68.9, and involved expanding 1412 verticies
+Finding the solution involved 1.08246207237 seconds of walltime
+----------------------------------------------------------------------------------
+Doing A* with heuristic manhattanDistance on hard:
+The solution's cost is: 66.9, and involved expanding 1411 verticies
+Finding the solution involved 1.09070801735 seconds of walltime
+----------------------------------------------------------------------------------
+DFS is darkviolet
+BFS is darkorange
+Best_euclideanDistance is olive
+A*_euclideanDistance is darkslategray
+Best_manhattanDistance is antiquewhite
+A*_manhattanDistance is slategrey
+DFS is darkviolet
+BFS is darkorange
+Best_euclideanDistance is olive
+A*_euclideanDistance is darkslategray
+Best_manhattanDistance is antiquewhite
+A*_manhattanDistance is slategrey
+DFS is darkviolet
+BFS is darkorange
+Best_euclideanDistance is olive
+A*_euclideanDistance is darkslategray
+Best_manhattanDistance is antiquewhite
+A*_manhattanDistance is slategrey
+DFS is darkviolet
+BFS is darkorange
+Best_euclideanDistance is olive
+A*_euclideanDistance is darkslategray
+Best_manhattanDistance is antiquewhite
+A*_manhattanDistance is slategrey
+
