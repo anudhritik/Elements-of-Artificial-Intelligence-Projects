@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\begin{document}
+
+
+\title{ CSCI B 551 \\
+Elements of Artificial Intelligence }
+\author{Anudhriti Reddy Katanguri \\
+           anukatan@indiana.edu}
+\maketitle
+
+\begin{enumerate}
+\item A famous AI application identified promising areas in which to drill for oil. Suppose this is applied in a region which is 30$\%$ mountainous and 70$\%$ non mountainous, and that oil is present 15$\%$ of the time. When oil is found, 40$\%$ of the time the region is mountainous; when oil is not found 71.765$\%$ of the time the region is not mountainous. \\
+
+Given, \\
+P(M) = 0.3 \\
+P(NM)= 0.7 \\
+P(O) = 0.15 \\
+P(NO)= 1-P(O) = 0.85\\
+P(${M}\mid{O}$) = 0.4 \\
+P(${NM}\mid{O}$) = 0.6 \\
+P(${NM}\mid{NO}$) = 0.7165 \\
+P(${M}\mid{NO}$) = 0.2823 \\
+
+\item What is the probability of oil being present when the region is non mountainous? \\
+Ans)\begin{align*}
+ Pr[O|NM]&=\dfrac{Pr[NM|O]*Pr[O]}{Pr[NM|O]*Pr[O])+(Pr[NM|NO])*Pr[NO]}\\
+ &= \dfrac{0.6 * 0.15}{(0.6*0.15)+(0.7165*0.85)} \\
+ &= \dfrac{0.09}{0.699} \\
+ &= 0.1287 = 12.875 percent 
+ \end{align*}
+
+\item Suppose that the system predicts oil in a mountainous region. Drilling would cost 1,0000,000 dollars; the profit if oil were found would be 2,000,000 dollars. Should the system advise drilling? Justify your answer. \\
+Ans) Pr[O$\mid$M] be the probability of oil given the region is mountainous.\\
+\begin{align*}
+Pr[O|NM] &= \dfrac{Pr[M|O]*Pr[O]}{Pr[M]} From Bayes Rule\\
+&=Pr[O|M] = \dfrac{0.4 * 0.15}{0.3} \\
+&= 0.2 = 20 percent
+\end{align*}
+Given, drilling cost = 1,000,000 dollars \\
+Profit if oil is found = 2,000,000 dollars \\
+From the above solution we just found that probability of finding oil in mountainous region is 0.2 which is just 20 percent. Taking an example to conclusion, if we were to drill in about 5 places cost of drilling would be 5 million dollars. Oil would be found only in 1 place thus resulting in a profit of 2 million dollars. As such we have a loss of 3 million dollars. If there was a greater probability of finding the oil then loss would nullified and we can get profits as profit is 2 times the cost of drilling. Hence, system shouldn't advise us drilling from the data provided. \\ 
+\item Suppose a robot sensor used to detect oil has a false positive rate of 1 percent \\
+b)Now we will calculate the precise value to compare to intuition.  Suppose that if oil is present, there is a .999 chance the sensor will give a positive reading.  Also, suppose oil is present 2 percent of the time.   What is the correct probability of oil being present if the sensor signals the presence of oil? \\
+Ans)Given, \\
+Probability of robot sensor detecting the oil when oil is not present (False positive rate) Pr[S$\mid$ NO] = 0.01 \\
+Probability of robot sensor giving the positive signal when oil is present i.e., Pr[S$\mid$O] = 0.999 \\
+Probability of oil being present Pr[O] = 0.02 \\
+Probability of oil not being present = 1-Pr[O] = Pr[NO] = 0.98 \\
+Let, Pr[O$\mid$S] be the probability of oil being present and given a positive robot sensor signal. \\
+\begin{align*}
+Pr[O|S] &= \dfrac{Pr[S|O]*Pr[O]}{Pr[S]} From Bayes Rule
+\end{align*}
+Pr[S] can be expressed as follows, \\
+\begin{align*}
+Pr[S]&={Pr[S|O]*Pr[O] + Pr[S|NO]}*{Pr[NO]}\\
+&= {0.999*0.2} + {0.01*0.98} = 0.0297 
+\end{align*}
+\begin{align*}
+Pr[O|S] = \frac{(0.999*0.2)}{0.02978} = 0.6709 = 67.09 percent
+\end{align*}
+\item \textbf{Planning}\\
+a) The initial state is: \\
+At(Monkey, A) $\wedge$ At(Bananas, B) $\wedge$ At(Box,C) $\wedge$ Height(Monkey, Low) $\wedge$ Height(Box, Low) $\wedge$ Height(Bananas, High) $\wedge$ Pushable(Box) $\wedge$ Climable(Box) \\
+
+b) The actions are: \\
+Action(ACTION:Go(x,y), \\
+PRECONDITION: At(Monkey,x), \\
+EFFECT: At(Monkey,y) $\wedge$ $\sim$ (At(Monkey,x)))\\
+
+Action(ACTION:Push(Object,x,y), \\ PRECONDITION: At(Monkey,x) $\wedge$ Pushable(Object), \\
+EFFECT: At(Object,y) $\wedge$ At(Monkey, y) $\wedge$ $\sim$ At(Object,x) $\wedge$ $\sim$ At(Monkey,x))\\
+
+ACTION(ACTION:ClimbUp(Object), \\
+PRECONDITION: At(Monkey,x) $\wedge$ At(Object,x) $\wedge$ Height(Monkey,Low) $\wedge$ Climbable(Object), \\
+EFFECT: On(Monkey,Object) $\wedge$ At(Monkey,x) $\wedge$ At(Object,x) $\wedge$ Height(Monkey,High) $\wedge$ $\sim$ Height(Monkey,Low)\\
+
+Action(ACTION: Grasp(Object), \\
+PRECONDITION: Height(Monkey,h) $\wedge$ Height(Object,h)$\wedge$ At(Monkey,x) $\wedge$ At(Object,x), \\
+EFFECT: Holds(Monkey,Objects)) \\
+
+Action(ACTION: ClimbDown(Object), \\
+PRECONDITION: On(Monkey,Object) $\wedge$ Height(Monkey,High), \\
+EFFECT: $\sim$ On(Monkey,Object) $\wedge$ $\sim$ Height(Monkey,High) $\wedge$ Height(Monkey,Low) \\
+
+Action(ACTION: Ungrasp(Object), \\ 
+PRECONDITION: Holds(Monkey, Object),\\
+EFFECT: $\sim$ Have(Monkey,Object))\\
+
+c) In terms of situation calculus, the goal state g is: \\
+Holds(Monkey, Bananas, g) $\wedge$ ($\exists$ x At(Box, x, $g_0$) $\wedge$ At(Box,x,g))\\
+In STRIPS, we can only represent the goal state, there is no means of representing the fact that there must be a relation between two states within the plan. Thus, leaving no way to represent this goal. \\
+
+d)Action(ACTION:Push(Object,x,y), \\
+PRECONDITION: At(Monkey,x) $\wedge$ Pushable(Object), \\
+EFFECT: At(Object,y) $\wedge$ At(Monkey, y) $\wedge$ $\sim$ At(Object,x) $\wedge$ $\sim$ At(Monkey,x))
+\end{enumerate}
+\end{document}
